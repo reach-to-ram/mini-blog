@@ -8,11 +8,7 @@ const Post = require('./models/Post')
 const app = express()
 
 // Middleware
-app.use(cors({
-  origin: 'https://mini-blog-3ewp.vercel.app',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
-}))
+app.use(cors())
 app.use(express.json())
 
 // Connect to MongoDB
