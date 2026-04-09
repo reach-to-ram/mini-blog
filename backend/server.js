@@ -7,7 +7,9 @@ const Post = require('./models/Post')
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: 'https://mini-blog-3ewp.vercel.app'
+}))
 app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URI)
