@@ -13,7 +13,7 @@ function App() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/posts')
+      const res = await axios.get('https://mini-blog-seven-liard.vercel.app/posts')
       setPosts(res.data)
     } catch (err) {
       console.log('Error fetching posts:', err)
@@ -23,7 +23,7 @@ function App() {
   const createPost = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:5000/posts', { title, content })
+      await axios.post('https://mini-blog-seven-liard.vercel.app/posts', { title, content })
       setTitle('')
       setContent('')
       fetchPosts()
